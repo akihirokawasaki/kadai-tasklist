@@ -1,6 +1,11 @@
- {!! Form::model($task, ['route' => 'tasks.store']) !!}
-            
- <div class="row">
+@extends('layouts.app')
+
+@section('content')
+
+    <h1>タスク新規作成ページ</h1>
+
+
+    <div class="row">
         <div class="col-xs-6">
             {!! Form::model($task, ['route' => 'tasks.store']) !!}
             
@@ -10,7 +15,7 @@
                 </div>
                     
                 <div class="form-group">
-                    {!! Form::label('content', 'ステータス:') !!}
+                    {!! Form::label('content', 'タスク:') !!}
                     {!! Form::text('content', null, ['class' => 'form-control']) !!}
                 </div>
                 
@@ -19,3 +24,5 @@
             {!! Form::close() !!}
         </div>
     </div>
+
+@endsection
