@@ -1,4 +1,10 @@
-    @if (count($tasks) > 0)
+@extends('layouts.app')
+
+@section('content')
+
+    <h1>task list</h1>
+
+    @if (count($messages) > 0)
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -11,7 +17,7 @@
                 @foreach ($tasks as $task)
                     <tr>
                         <td>{!! link_to_route('tasks.show', $task->id, ['id' => $task->id]) !!}</td>
-                        <td>{{ $task->status }}</td>
+                        <td>{{ $task->title }}</td>
                         <td>{{ $task->content }}</td>
                     </tr>
                 @endforeach
@@ -19,3 +25,5 @@
         </table>
     @endif
     {!! link_to_route('tasks.create', '新規タスクの投稿', null, ['class' => 'btn btn-primary']) !!}
+
+@endsection
