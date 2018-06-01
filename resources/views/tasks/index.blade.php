@@ -4,7 +4,7 @@
 
     <h1>task list</h1>
 
-    @if (count($messages) > 0)
+    @if (count($tasks) > 0)
         <table class="table table-striped">
             <thead>
                 <tr>
