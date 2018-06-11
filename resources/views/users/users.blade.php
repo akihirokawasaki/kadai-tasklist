@@ -14,8 +14,6 @@
             </div>
         </div>
     </li>
-@endforeach
-</ul>
 <! - Omission ->
 @endforeach
 </ul>
